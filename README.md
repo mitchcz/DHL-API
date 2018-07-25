@@ -95,6 +95,11 @@ $dhl = $config['dhl'];
 // Test a ShipmentRequest using DHL XML API
 $sample = new ShipmentRequest();
 
+//required meta information with schema version 6.2
+$sample->SoftwareName = "My App";
+$sample->SoftwareVersion = "1.0";
+
+
 // Assuming there is a config array variable with id and pass to DHL XML Service
 $sample->SiteID = $dhl['id'];
 $sample->Password = $dhl['pass'];
